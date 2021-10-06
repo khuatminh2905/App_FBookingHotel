@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_editor_absoluteX="1dp"
+    app:layout_editor_absoluteY="1dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_mail_fill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:padding="5dp"
+        tools:context=".booking.FillInformationActivity">
+
+        <LinearLayout
+            android:id="@+id/ln_login_fill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Đăng nhập để tiếp tục!"
+                android:textColor="#3F51B5"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_open_login_fill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button"
+                android:text="Đăng nhập"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logo_bee" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_form_fill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_contact_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Thông tin liên hệ"
+                android:textColor="#3F51B5"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_name_fill"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_title_contact_fill"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="10dp"
+                android:hint="Họ và tên"
+                android:lineHeight="40dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#838383" />
+
+            <EditText
+                android:id="@+id/edt_phone_fill"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/edt_name_fill"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:hint="Số điện thoại"
+                android:lineHeight="40dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#838383" />
+
+            <EditText
+                android:id="@+id/edt_id_person_fill"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/edt_phone_fill"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="10dp"
+                android:hint="CCCD/CMND"
+                android:lineHeight="40dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#838383" />
+
+            <EditText
+                android:id="@+id/edt_email_fill"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/edt_id_person_fill"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:lineHeight="40dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColorHint="#838383" />
+
+            <TextView
+                android:id="@+id/tv_title_info_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_email_fill"
+                android:layout_marginBottom="5dp"
+                android:text="Thông tin chuyến đi"
+                android:textColor="#3F51B5"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ln_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_info_fill"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_check_in_date_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_calender_fill"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Ngày nhận"
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#838383" />
+
+                <EditText
+                    android:id="@+id/edt_check_out_date_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_calender_fill"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Ngày trả"
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#838383" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ln_date"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_people_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:drawableLeft="@drawable/ic_people_fill"
+                    android:drawablePadding="10dp"
+                    android:hint="Số người "
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#838383" />
+
+                <EditText
+                    android:id="@+id/edt_night_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_night"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Số đêm"
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#838383" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_request_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ln_info"
+                android:layout_marginBottom="5dp"
+                android:text="Yêu cầu"
+                android:textColor="#3F51B5"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rg_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_request_fill"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_self_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:checked="true"
+                    android:text="Đặt cho bản thân"
+                    android:textStyle="bold"
+                    android:theme="@style/BrandedRadioButton" />
+
+                <RadioButton
+                    android:id="@+id/rb_other_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:text="Đặt cho người khác"
+                    android:textStyle="bold"
+                    android:theme="@style/BrandedRadioButton" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ln_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_check"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_check_in_time_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_clock"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Giờ nhận"
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#838383" />
+
+                <EditText
+                    android:id="@+id/edt_check_out_time_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/edt_name_sign_up"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edit_text_fill_infor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_clock"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Giờ trả"
+                    android:lineHeight="40dp"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="#838383" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_error_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ln_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#FF0000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title_pay_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_error_fill"
+                android:text="Thanh toán"
+                android:textColor="#FF0000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_pay_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/tv_title_pay_fill"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/white"
+                android:text="Thanh toán khi nhận phòng"
+                android:textStyle="bold"
+                android:theme="@style/BrandedRadioButton" />
+
+            <TextView
+                android:id="@+id/tv_title_price_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cb_pay_fill"
+                android:layout_toLeftOf="@+id/tv_price_fill"
+                android:text="Đơn giá: "
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_price_fill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cb_pay_fill"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:text="1500000 VNĐ"
+                android:textColor="#FF0000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title_price_fill"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cancel_fill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_cancel_detail"
+                    android:text="Quay lại"
+                    android:textColor="#FF0000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_open_check_again"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_button_room_detail"
+                    android:text="Tiếp tục"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
